@@ -1,28 +1,41 @@
+
+import { use } from "react";
 import Technologies from "./Technologies";
 import TechnologyStack from "./TechnologyStack";
+import type { ItechnologiesPromiceType } from "../Type";
 
-const Explore_the_Technologies = () => {
+const ExploreTheTechnologies = ({ technologiesPromice }: ItechnologiesPromiceType) => {
+    const technologiesData = use(technologiesPromice);
+    console.log(technologiesData);
     return (
-        <section>
-            <div className="container mx-auto">
+        <section className="py-8 sm:py-10 lg:py-14">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Section heading */}
+                <header className="mb-6 lg:mb-10">
+                    <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                        Explore the{" "}
+                        <span className="bg-linear-to-r from-red-700 to-purple-600 bg-clip-text text-transparent">
+                            Technologies
+                        </span>
+                    </h2>
 
-                <div className="lg:px-5 py-3">
-                    <h2 className="font-bold mb-2 text-3xl lg:text-4xl text-black">Explore the <span className="bg-linear-to-r from-red-700 to-purple-600 bg-clip-text text-transparent ">Technologies</span></h2>
-                    <p className="font-medium text-gray-500 lg:text-2xl text-base">Pick one technology per category to build your ideal stack.</p>
-                </div>
+                    <p className="max-w-2xl text-base  text-gray-500 sm:text-lg lg:text-xl">
+                        Pick one technology per category to build your ideal stack.
+                    </p>
+                </header>
 
-                <div className="grid grid-cols-4 mt-5 lg:mt-10">
-                    <div className="col-span-3">
-                        <Technologies></Technologies>
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+                    <div className="md:col-span-2 lg:col-span-3">
+                        <Technologies technologiesData={technologiesData} />
                     </div>
-                    <div>
-                        <TechnologyStack></TechnologyStack>
-                    </div>
 
+                    <div className="md:col-span-1">
+                        <TechnologyStack />
+                    </div>
                 </div>
             </div>
         </section>
     );
 };
 
-export default Explore_the_Technologies;
+export default ExploreTheTechnologies;
