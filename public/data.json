@@ -6,7 +6,7 @@
     "description": "The standard markup language for structuring content on web pages.",
     "icon": "https://icon.icepanel.io/Technology/svg/HTML5.svg",
     "rating": 4.8,
-    "difficulty": "Beginner-Friendly",
+    "difficulty": "Beginner",
     "badge": "Essential"
   },
   {
@@ -16,7 +16,7 @@
     "description": "A stylesheet language used to design responsive and visually appealing web interfaces.",
     "icon": "https://icon.icepanel.io/Technology/svg/CSS3.svg",
     "rating": 4.8,
-    "difficulty": "Beginner-Friendly",
+    "difficulty": "Beginner",
     "badge": "Essential"
   },
   {
@@ -56,7 +56,7 @@
     "description": "A utility-first CSS framework for rapidly building custom and responsive web designs.",
     "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
     "rating": 4.8,
-    "difficulty": "Beginner-Friendly",
+    "difficulty": "Beginner",
     "badge": "Fast"
   },
   {
@@ -86,7 +86,7 @@
     "description": "A readable, general-purpose programming language used in web development, automation, data science, and AI.",
     "icon": "https://icon.icepanel.io/Technology/svg/Python.svg",
     "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
+    "difficulty": "Beginner",
     "badge": "Versatile"
   },
   {
@@ -126,7 +126,7 @@
     "description": "A distributed version control system for tracking code changes and collaborating with developers.",
     "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
     "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
+    "difficulty": "Beginner",
     "badge": "Essential"
   },
   {
@@ -136,7 +136,7 @@
     "description": "A collaborative platform for hosting Git repositories, reviewing code, and managing software projects.",
     "icon": "https://icon.icepanel.io/Technology/svg/GitHub.svg",
     "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
+    "difficulty": "Beginner",
     "badge": "Collaboration"
   },
   {

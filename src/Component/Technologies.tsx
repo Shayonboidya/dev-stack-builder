@@ -1,17 +1,13 @@
-import type { ItechnologiesDataType } from "../Type";
+import type { ItechnologiesDataType, Itechnology } from "../Type";
+import TechnologieCard from "./TechnologieCard";
 
 const Technologies = ({ technologiesData }: ItechnologiesDataType) => {
     return (
-        <div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 ">
             {
-                technologiesData.map((t) => {
-                    return (
-                        <div key={t.name}>
-                            <h2>{t.description}</h2>
-                            <h2>{t.name}</h2>
-                        </div>
-                    );
-                })
+                technologiesData.map((technology: Itechnology, idx: number) => (
+                    <TechnologieCard key={idx} technology={technology} />
+                ))
             }
         </div>
     );
