@@ -1,7 +1,7 @@
 import { Suspense, useState } from "react";
-import Banner from "./Component/Banner"
-import Explore_the_Technologies from "./Component/Explore_the_Technologies"
-import Nav from "./Component/Nav"
+import Banner from "./Component/Banner Section/Banner"
+import Explore_the_Technologies from "./Component/Main Body Section/Explore_the_Technologies"
+import Nav from "./Component/Nav Section/Nav"
 
 
 const tecnologiesFetch = async () => {

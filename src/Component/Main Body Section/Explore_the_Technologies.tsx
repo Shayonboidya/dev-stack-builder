@@ -2,7 +2,7 @@
 import { use, useState } from "react";
 import Technologies from "./Technologies";
 import TechnologyStack from "./TechnologyStack";
-import type { ItechnologiesPromiceType, Itechnology } from "../Type";
+import type { ItechnologiesPromiceType, Itechnology } from "../../Type";
 
 const ExploreTheTechnologies = ({ technologiesPromice }: ItechnologiesPromiceType) => {
     const [stack, setStack] = useState<Itechnology[]>([]);

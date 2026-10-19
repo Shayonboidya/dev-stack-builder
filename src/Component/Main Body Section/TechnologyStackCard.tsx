@@ -1,14 +1,14 @@
 
 import { TiTimes } from "react-icons/ti";
-import type { ItechnologyStackCard } from "../Type";
+import type { ItechnologyStackCard } from "../../Type";
 
 const TechnologyStackCard = ({
     techonology,
     stack,
     setStack
 }: ItechnologyStackCard) => {
-    const handelIsClickTimes = ()=>{
-        const remainStack = stack.filter((item)=>item.id !== techonology.id);
+    const handelIsClickTimes = () => {
+        const remainStack = stack.filter((item) => item.id !== techonology.id);
         setStack(remainStack);
     }
     return (

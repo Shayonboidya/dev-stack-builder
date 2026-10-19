@@ -1,17 +1,17 @@
 
 import { FaStar } from "react-icons/fa";
-import type { ItechnologieCard } from "../Type";
+import type { ItechnologieCard } from "../../Type";
 
 const TechnologieCard = ({ technology, stack, setStack }: ItechnologieCard) => {
 
-    const isSelected = stack.some((item)=>item.id === technology.id);
+    const isSelected = stack.some((item) => item.id === technology.id);
 
     // handeral function
-    const handelAddToStack = () =>{
-        setStack((prevStack)=>{
-            const alradyExist =  prevStack.some((item)=>item.id === technology.id)
-            if(alradyExist) return prevStack;
-            return [...prevStack,technology];   
+    const handelAddToStack = () => {
+        setStack((prevStack) => {
+            const alradyExist = prevStack.some((item) => item.id === technology.id)
+            if (alradyExist) return prevStack;
+            return [...prevStack, technology];
         });
     }
     return (

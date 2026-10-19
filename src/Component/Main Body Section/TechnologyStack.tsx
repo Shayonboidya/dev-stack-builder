@@ -1,5 +1,5 @@
 
-import type { ItechnologyStack } from "../Type";
+import type { ItechnologyStack } from "../../Type";
 import TechnologyStackCard from "./TechnologyStackCard";
 
 const TechnologyStack = ({

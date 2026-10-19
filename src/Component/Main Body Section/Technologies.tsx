@@ -1,4 +1,4 @@
-import type { ItechnologiesDataType, Itechnology } from "../Type";
+import type { ItechnologiesDataType, Itechnology } from "../../Type";
 import TechnologieCard from "./TechnologieCard";
 
 const Technologies = ({ technologiesData, stack, setStack }: ItechnologiesDataType) => {
