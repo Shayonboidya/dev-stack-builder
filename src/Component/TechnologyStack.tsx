@@ -1,6 +1,3 @@
-// import React from 'react';
-
-import { useState } from "react";
 import type { ItechnologyStack } from "../Type";
 
 const TechnologyStack = ({ stack, setStack }: ItechnologyStack) => {
