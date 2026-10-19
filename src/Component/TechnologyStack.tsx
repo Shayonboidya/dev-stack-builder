@@ -1,8 +1,15 @@
 // import React from 'react';
 
+import { useState } from "react";
 import type { ItechnologyStack } from "../Type";
 
-const TechnologyStack = ({ stack }: ItechnologyStack) => {
+const TechnologyStack = ({ stack,setStack }: ItechnologyStack) => {
+
+    const [isClickRemovedAll, setIsClickRemovedAll] = useState(false);
+    // const handelIsClickRemovedAll = () =>{
+    //     setIsClickRemovedAll(true);
+    //     // isClickRemovedAll && stack.splice(0,stack.length);
+    // }
     return (
         <div className="border border-gray-200 rounded-2xl p-4">
 
@@ -20,7 +27,9 @@ const TechnologyStack = ({ stack }: ItechnologyStack) => {
                     <>
                         <p className="text-gray-500 text-base my-2">{stack.length} technologies selected</p>
                         
-                        <button className="text-2xl text-red-600 btn px-5 py-2 text-center border border-red-500">Removed All</button>
+                        <button 
+                        onClick={handelIsClickRemovedAll}
+                        className="text-2xl text-red-600 btn px-5 py-2 text-center border border-red-500">Removed All</button>
 
                     </>
                 )

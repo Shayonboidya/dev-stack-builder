@@ -8,7 +8,6 @@ const ExploreTheTechnologies = ({ technologiesPromice }: ItechnologiesPromiceTyp
     const [stack, setStack] = useState<Itechnology[]>([]);
     const technologiesData = use(technologiesPromice);
 
-
     return (
         <section className="py-8 sm:py-10 lg:py-14">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,11 +27,19 @@ const ExploreTheTechnologies = ({ technologiesPromice }: ItechnologiesPromiceTyp
 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
                     <div className="md:col-span-2 lg:col-span-3">
-                        <Technologies technologiesData={technologiesData} stack={stack} setStack={setStack} />
+                        <Technologies
+                            technologiesData={technologiesData}
+                            stack={stack}
+                            setStack={setStack}
+                        />
                     </div>
 
-                    <div className="md:col-span-1">
-                        <TechnologyStack stack={stack} setStack={setStack} />
+                    <div
+                        className="md:col-span-1">
+                        <TechnologyStack
+                            stack={stack}
+                            setStack={setStack}
+                        />
                     </div>
                 </div>
             </div>

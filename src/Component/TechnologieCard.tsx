@@ -3,16 +3,8 @@ import { FaStar } from "react-icons/fa";
 import type { ItechnologieCard } from "../Type";
 
 const TechnologieCard = ({technology,stack,setStack}:ItechnologieCard) => {
-    const isClick = stack.some((st)=> {
-        st.id === technology.id;
+    
 
-    })
-
-    const handelIsClick = () =>{
-        if(isClick)return;
-        setStack((prev) => [...prev,technology])
-
-    }
     return (
         <article className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-xl sm:p-5">
             {/* Icon and Badge */}
@@ -61,9 +53,8 @@ const TechnologieCard = ({technology,stack,setStack}:ItechnologieCard) => {
             {/* Action */}
             <button
                 type="button"
-                onClick={handelIsClick}
-                disabled={isClick}
-                className={`mt-5 inline-flex w-full items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white ${isClick ? "transition-all duration-200 hover:bg-purple-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 active:scale-[0.98]" : ""}`}
+                
+                className={`mt-5 inline-flex w-full items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-purple-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 active:scale-[0.98]`}
             >
                 Add to Stack
             </button>

@@ -13,7 +13,7 @@ function App() {
 
     const [technologiesPromice] = useState(() => tecnologiesFetch());
     // const technologiesPromice = TecnologiesFetch();
-    console.log(technologiesPromice);
+    // console.log(technologiesPromice);
     return (
         <>
             <Nav></Nav>
