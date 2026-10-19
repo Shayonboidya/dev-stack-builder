@@ -2,9 +2,18 @@
 import { FaStar } from "react-icons/fa";
 import type { ItechnologieCard } from "../Type";
 
-const TechnologieCard = ({technology,stack,setStack}:ItechnologieCard) => {
-    
+const TechnologieCard = ({ technology, stack, setStack }: ItechnologieCard) => {
 
+    const isSelected = stack.some((item)=>item.id === technology.id);
+
+    // handeral function
+    const handelAddToStack = () =>{
+        setStack((prevStack)=>{
+            const alradyExist =  prevStack.some((item)=>item.id === technology.id)
+            if(alradyExist) return prevStack;
+            return [...prevStack,technology];   
+        });
+    }
     return (
         <article className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-xl sm:p-5">
             {/* Icon and Badge */}
@@ -53,12 +62,16 @@ const TechnologieCard = ({technology,stack,setStack}:ItechnologieCard) => {
             {/* Action */}
             <button
                 type="button"
-                
-                className={`mt-5 inline-flex w-full items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-purple-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 active:scale-[0.98]`}
+                onClick={handelAddToStack}
+                disabled={isSelected}
+                className={`mt-5 inline-flex w-full items-center justify-center rounded-xl ${isSelected ? "bg-gray-200  hover:bg-purple-200 text-gray-800" : "bg-gray-900 text-white hover:bg-purple-700"}  px-4 py-3 text-sm font-semibold  transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 active:scale-[0.98]`}
             >
-                Add to Stack
+                {
+                    isSelected ? 'Added to Stack' : "Add to Stack"
+                }
+
             </button>
-        </article>
+        </article >
     );
 };
 
