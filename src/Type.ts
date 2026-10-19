@@ -1,3 +1,5 @@
+import type { Dispatch, SetStateAction } from "react";
+
 export interface Itechnology {
     id: string,
     name: string,
@@ -8,11 +10,25 @@ export interface Itechnology {
     difficulty: string,
     badge: string
 }
+export interface ItechnologieCard {
+    technology: Itechnology,
+    stack: Itechnology[];
+    setStack: Dispatch<SetStateAction<Itechnology[]>>;
+
+}
 
 
 export interface ItechnologiesPromiceType {
-    technologiesPromice:Promise<Itechnology[]>
+    technologiesPromice: Promise<Itechnology[]>
 }
-export interface ItechnologiesDataType{
-    technologiesData:Itechnology[];
+export interface ItechnologiesDataType {
+    technologiesData: Itechnology[];
+    stack: Itechnology[];
+    setStack: Dispatch<SetStateAction<Itechnology[]>>;
+}
+
+export interface ItechnologyStack {
+    stack: Itechnology[];
+    setStack: Dispatch<SetStateAction<Itechnology[]>>;
+
 }
