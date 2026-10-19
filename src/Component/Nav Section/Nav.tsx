@@ -1,7 +1,7 @@
-import { GiHamburgerMenu } from "react-icons/gi";
-import logo from "../assets/logo-text.png";
-import { FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import logo from '../../assets/logo-text.png'
+import { FaTimes } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
