@@ -6,9 +6,9 @@ const Technologies = ({ technologiesData, stack, setStack }: ItechnologiesDataTy
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 ">
             {
-                technologiesData.map((technology: Itechnology, idx: number) => (
+                technologiesData.map((technology: Itechnology) => (
                     <TechnologieCard
-                        key={idx}
+                        key={technology.id}
                         technology={technology}
                         stack={stack}
                         setStack={setStack}

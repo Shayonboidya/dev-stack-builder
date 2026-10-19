@@ -30,5 +30,10 @@ export interface ItechnologiesDataType {
 export interface ItechnologyStack {
     stack: Itechnology[];
     setStack: Dispatch<SetStateAction<Itechnology[]>>;
-
+    
+}
+export interface ItechnologyStackCard{
+    techonology : Itechnology;
+    stack: Itechnology[];
+    setStack: Dispatch<SetStateAction<Itechnology[]>>;
 }

@@ -1,35 +1,69 @@
+
 import type { ItechnologyStack } from "../Type";
+import TechnologyStackCard from "./TechnologyStackCard";
 
-const TechnologyStack = ({ stack, setStack }: ItechnologyStack) => {
-
-    const handelRemovedAll = () => {
+const TechnologyStack = ({
+    stack,
+    setStack,
+}: ItechnologyStack) => {
+    const handleRemoveAll = () => {
         setStack([]);
-    }
+    };
+
     return (
-        <div className="border border-gray-200 rounded-2xl p-4">
+        <aside className="w-full min-w-0 rounded-2xl border border-gray-200 bg-white p-3 shadow-sm sm:p-4 lg:p-5">
 
-            <h2 className="font-bold text-2xl my-2">Your Stack</h2>
-            {
-                (stack.length === 0) ? (
-                    <>
-                        <p className="text-gray-500 text-base my-2">No technologies selected yet</p>
-                        <div className="border border-dashed border-gray-400 rounded-2xl px-4 py-10 text-center">
-                            <p className="text-gray-500 text-base">your stack is empty</p>
-                        </div>
-                    </>
+            {/* Header */}
+            <div className="flex flex-col  gap-3">
+                <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
+                    Your Stack
+                </h2>
 
-                ) : (
-                    <>
-                        <p className="text-gray-500 text-base my-2">{stack.length} technologies selected</p>
+                <span className="text-base font-semibold text-gray-400">
+                    {
+                        stack.length === 0 ? "No techonologys selected yet" : `${stack.length} Ttechonologys selected`
+                    }
+                </span>
+            </div>
 
-                        <button
-                            onClick={handelRemovedAll}
-                            className="text-base text-red-600 btn px-3 py-2 text-center border border-red-500 rounded-3xl">Removed All</button>
+            {/* Empty State */}
+            {stack.length === 0 ? (
+                <div className="mt-5 rounded-xl border border-dashed border-gray-300 bg-gray-50 px-4 py-8 text-center sm:py-10">
 
-                    </>
-                )
-            }
-        </div>
+                    <p className="mt-3 text-base font-semibold text-gray-400">
+                        Your stack is empty
+                    </p>
+                </div>
+            ) : (
+                <>
+
+                    {/* Selected Technologies */}
+                    <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-1">
+                        {stack.map((technology) => (
+                            <div
+                                key={technology.name}
+                                className="min-w-0"
+                            >
+                                <TechnologyStackCard
+                                    techonology={technology}
+                                    stack={stack}
+                                    setStack={setStack}
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Remove All Button */}
+                    <button
+                        type="button"
+                        onClick={handleRemoveAll}
+                        className="mt-5 w-full rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-600 transition-colors hover:border-red-300 hover:bg-red-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 active:scale-[0.98] sm:text-base"
+                    >
+                        Remove All
+                    </button>
+                </>
+            )}
+        </aside>
     );
 };
 
