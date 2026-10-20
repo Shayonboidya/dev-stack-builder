@@ -37,3 +37,7 @@ export interface ItechnologyStackCard{
     stack: Itechnology[];
     setStack: Dispatch<SetStateAction<Itechnology[]>>;
 }
+export interface IsocialMediaLink{
+    name:string;
+    link:string;
+}
