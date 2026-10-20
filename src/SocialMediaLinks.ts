@@ -3,7 +3,7 @@ import type { IsocialMediaLink } from "./Type";
 export const socialMediaLinks: IsocialMediaLink[] = [
     {
         name: "facebook",
-        link: ""
+        link: "https://www.facebook.com/shayon.boidya/"
     },
     {
         name: "Instagram",
